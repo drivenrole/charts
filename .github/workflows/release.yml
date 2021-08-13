@@ -36,21 +36,13 @@ jobs:
           CR_PACKAGE_PATH: .deploy
           CR_CHARTS_REPO: https://drivenrole.github.io/charts
           CR_INDEX_PATH: index.yaml
+          CR_PAGES_BRANCH: master
         run: |
           cr package chart
           cr upload
           cr index --push
           ARCHIVE=$(ls ${CR_PACKAGE_PATH})
           echo "::set-output name=version::${ARCHIVE%.*}"
-
-      - id: push-index-yaml
-        run:
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git checkout master
-          git add ./index.yaml
-          git commit -m "Updating helm repo index for version ${GITHUB_REF##*/}"
-          git remote add remote https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          git push --quiet --set-upstream remote master
 
   install:
     runs-on: ubuntu-latest
