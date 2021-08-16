@@ -36,7 +36,7 @@ jobs:
           CR_PACKAGE_PATH: .deploy
           CR_CHARTS_REPO: https://drivenrole.github.io/charts
           CR_INDEX_PATH: index.yaml
-          CR_RELEASE_NAME_TEMPLATE: .github/.chart-releaser/release-name.tpl
+          CR_RELEASE_NAME_TEMPLATE: "{{ .Version }}"
         run: |
           cr package chart
           cr upload
