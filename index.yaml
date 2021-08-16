@@ -3,6 +3,16 @@ entries:
   fusionauth:
   - apiVersion: v2
     appVersion: 1.27.2
+    created: "2021-08-16T19:02:24.741144222Z"
+    description: Helm chart for fusionauth
+    digest: 79c2322fb3d118aee824a26e68fa2afe6ac6e55c5e0764ceced6be57fba4fd70
+    name: fusionauth
+    type: application
+    urls:
+    - https://github.com/drivenrole/charts/releases/download/0.9.12/fusionauth-0.9.12.tgz
+    version: 0.9.12
+  - apiVersion: v2
+    appVersion: 1.27.2
     created: "2021-08-13T18:55:54.189830432Z"
     description: Helm chart for fusionauth
     digest: 12a2b0ce8c4db011e4cf1b054c33fb12035742d4fc494d207b43e4701bdc3cb4
@@ -422,4 +432,4 @@ entries:
     urls:
     - https://github.com/FusionAuth/charts/releases/download/0.1.28/fusionauth-0.1.28.tgz
     version: 0.1.28
-generated: "2021-08-13T18:55:54.190231535Z"
+generated: "2021-08-16T19:02:24.741587828Z"
