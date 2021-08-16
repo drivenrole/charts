@@ -54,7 +54,7 @@ jobs:
         env:
           CHARTS_REPO: https://drivenrole.github.io/charts 
         run: |
-          helm repo add fusionauth ${CHARTS_REPO}
+          helm repo add drivenrole ${CHARTS_REPO}
           helm install fusionauth drivenrole/fusionauth \
             --set database.host=host \
             --set database.user=user \
