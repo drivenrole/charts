@@ -1,1 +1,1 @@
-{{ .Version }}
+default "{{ .Version }}"
