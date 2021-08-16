@@ -37,7 +37,7 @@ jobs:
           CR_CHARTS_REPO: https://drivenrole.github.io/charts
           CR_INDEX_PATH: index.yaml
           CR_RELEASE_NAME_TEMPLATE: "{{ .Version }}"
-          CR_PAGES_PATH: master
+          CR_PAGES_BRANCH: master
         run: |
           cr package chart
           cr upload
